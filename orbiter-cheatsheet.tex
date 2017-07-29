@@ -1,0 +1,204 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cheatsheet
+% LaTeX Template
+% Version 1.0 (12/12/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Michael Müller (https://github.com/cmichi/latex-template-collection) with
+% extensive modifications by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % 11pt font size
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[margin=0pt, landscape]{geometry} % Page margins and orientation
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{color} % Required for color customization
+\definecolor{mygray}{gray}{.75} % Custom color
+
+\usepackage{url} % Required for the \url command to easily display URLs
+
+\usepackage{amsmath}
+
+\usepackage[ % This block contains information used to annotate the PDF
+colorlinks=false, 
+pdftitle={Orbiter 2010 Cheat Sheet}, 
+pdfauthor={Jan Wedekind}, 
+pdfsubject={Cheat sheet for Orbiter 2010-P1}, 
+pdfkeywords={Orbiter, Cheatsheet}
+]{hyperref}
+
+\setlength{\unitlength}{1mm} % Set the length that numerical units are measured in
+\setlength{\parindent}{0pt} % Stop paragraph indentation
+
+\renewcommand{\dots}{\ \dotfill{}\ } % Fills in the right amount of dots
+
+\newcommand{\command}[2]{#1~\dotfill{}~#2\\} % Custom command for adding a shorcut
+
+\newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} % Custom command for subsection titles
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{picture}(297,210) % Create a container for the page content
+
+\put(10,200){ % Position on the page to put the title
+\begin{minipage}[t]{210mm} % The size and alignment of the title
+\section*{Orbiter 2010-P1 -- Keyboard Cheat Sheet} % Title
+\end{minipage}
+}
+
+\put(10,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+
+\sectiontitle{Game Play}
+			
+\command{T}{time lapse}
+\command{R}{real time}
+\command{Ctrl + F2}{time lapse dialog}
+\command{I}{toggle info display}
+\command{Ctrl + I}{object info dialog}
+\command{Ctrl + M}{map dialog}
+\command{Ctrl + N}{navaid dialog}
+\command{Ctrl + P}{pause}
+\command{Ctrl + S}{quick save}
+\command{F1}{toggle external view}
+\command{Alt + F1}{help window}
+\command{Ctrl + F1}{camera dialog}
+\command{F3}{vessel dialog}
+\command{Ctrl + F3}{previous vessel}
+\command{Ctrl + F4}{custom functions dialog}
+\command{F4}{main menu}
+\command{Alt + F4}{exit}
+\command{Ctrl + F5}{record/playback dialog}
+\command{F9}{toggle planetarium}
+\command{Ctrl + F9}{planetarium dialog}
+
+\sectiontitle{External Camera}
+\command{Ctrl + $\downarrow\uparrow\rightarrow\leftarrow$}{camera rotation}
+\command{pg up/pg dn}{increase/decrease distance}
+\command{F2}{toggle tracking mode}
+
+\sectiontitle{Cockpit Camera}
+\command{$\downarrow\uparrow\rightarrow\leftarrow$}{scroll panel}
+\command{Ctrl + $\downarrow\uparrow\rightarrow\leftarrow$}{switch to other panel}
+\command{Alt + $\downarrow\uparrow\rightarrow\leftarrow$}{view direction}
+\command{Home}{default viewing direction}
+\command{F8}{toggle cockpit views}
+\command{X}{zoom out}
+\command{Z}{zoom in}
+
+\end{minipage} % End the first column of text
+} % End the first division of the page
+
+%----------------------------------------------------------------------------------------
+%	SECOND COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(105,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+
+\sectiontitle{Actuators}
+\command{G}{gear}
+\command{Ctrl + B}{air brake}
+\command{Ctrl + D}{undock}
+
+\sectiontitle{Thrusters Numpad}
+\command{+}{full main}
+\command{-}{full retro}
+\command{*}{kill retro and main}
+\command{Ctrl + +}{increase main}
+\command{Ctrl + -}{decrease main}
+\command{0}{increase hover}
+\command{.}{decrease hover}
+\command{Ctrl + /}{enable/disable RCS}
+\command{/}{toggle rotation/translation RCS}
+\command{4/6, 2/8, 1/3}{bank, pitch, yaw}
+\command{2/8, 1/3, 6/9}{up/down, left/right, forw./backw.}
+\command{Ctrl + Numpad}{same with 10\% thrust}
+\command{5}{kill rotation}
+\command{A}{auto hover}
+\command{L}{auto level}
+\command{[}{turn prograde}
+\command{]}{turn retrograde}
+\command{;}{turn orbit-normal}
+\command{'}{turn orbit-antinormal}
+
+\sectiontitle{Flight Controls}
+\command{Alt + /}{enable/disable aerodynamic controls}
+\command{4/6, 2/8, 1/3}{bank, pitch, yaw}
+\command{insert/delete}{trim}
+\command{,}{left wheel brake}
+\command{.}{right wheel brake}
+
+\end{minipage} % End the second column of text
+} % End the second division of the page
+
+\put(200,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house tex
+
+\sectiontitle{HUD}
+\command{Ctrl+H}{on/off}
+\command{Alt+H}{toggle colour}
+\command{H}{toggle mode}
+\command{Ctrl+R}{HUD reference}
+\command{Ctrl+Alt+R}{HUD reference (subset)}
+
+\sectiontitle{Important files}
+
+\texttt{/.config/awesome/rc.lua}
+
+\texttt{/etc/xdg/awesome/rc.lua}
+
+\vspace{\baselineskip} % Whitespace before the next section
+
+%----------------------------------------------------------------------------------------
+%	LINKS AND INFORMATION
+%----------------------------------------------------------------------------------------
+
+\sectiontitle{Links and information}
+
+\url{http://awesome.naquadah.org/}
+
+\url{http://awesome.naquadah.org/wiki/}
+
+%----------------------------------------------------------------------------------------
+%	FOOTNOTE
+%----------------------------------------------------------------------------------------
+
+\vspace{\baselineskip}
+\linethickness{0.5mm} % Thickness of the footer line
+{\color{mygray}\line(1,0){30}} % Print the line with a custom color
+
+\footnotesize{
+Created by John Smith, 2015\\ 
+\url{http://johnsmith.com/}\\
+				
+Released under the MIT license.
+}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End the third column of text
+} % End the third division of the page
+\end{picture} % End the container for the entire page
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
