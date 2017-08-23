@@ -36,10 +36,10 @@
 \usepackage{amsmath}
 
 \usepackage[ % This block contains information used to annotate the PDF
-colorlinks=false, 
-pdftitle={Orbiter 2010 Cheat Sheet}, 
-pdfauthor={Jan Wedekind}, 
-pdfsubject={Cheat sheet for Orbiter 2010-P1}, 
+colorlinks=false,
+pdftitle={Orbiter 2016 Cheat Sheet},
+pdfauthor={Jan Wedekind},
+pdfsubject={Cheat sheet for Orbiter 2016},
 pdfkeywords={Orbiter, Cheatsheet}
 ]{hyperref}
 
@@ -60,7 +60,7 @@ pdfkeywords={Orbiter, Cheatsheet}
 
 \put(10,200){ % Position on the page to put the title
 \begin{minipage}[t]{210mm} % The size and alignment of the title
-\section*{Orbiter 2010-P1 -- Keyboard Cheat Sheet} % Title
+\section*{Orbiter 2016 -- Keyboard Cheat Sheet} % Title
 \end{minipage}
 }
 
@@ -68,27 +68,26 @@ pdfkeywords={Orbiter, Cheatsheet}
 \begin{minipage}[t]{85mm} % Create a box to house text
 
 \sectiontitle{Game Play}
-			
-\command{T}{time lapse}
-\command{R}{real time}
-\command{Ctrl + F2}{time lapse dialog}
-\command{I}{toggle info display}
-\command{Ctrl + I}{object info dialog}
-\command{Ctrl + M}{map dialog}
-\command{Ctrl + N}{navaid dialog}
-\command{Ctrl + P}{pause}
-\command{Ctrl + S}{quick save}
+
 \command{F1}{toggle external view}
-\command{Alt + F1}{help window}
 \command{Ctrl + F1}{camera dialog}
+\command{Alt + F1}{help window}
+\command{Ctrl + F2}{time lapse dialog}
 \command{F3}{vessel dialog}
 \command{Ctrl + F3}{previous vessel}
-\command{Ctrl + F4}{custom functions dialog}
 \command{F4}{main menu}
+\command{Ctrl + F4}{custom functions dialog}
 \command{Alt + F4}{exit}
 \command{Ctrl + F5}{record/playback dialog}
 \command{F9}{toggle planetarium}
 \command{Ctrl + F9}{planetarium dialog}
+\command{T}{time lapse}
+\command{R}{real time}
+\command{I}{toggle info display}
+\command{Ctrl + I}{object info dialog}
+\command{Ctrl + M}{map dialog}
+\command{Ctrl + P}{pause}
+\command{Ctrl + S}{quick save}
 
 \sectiontitle{External Camera}
 \command{Ctrl + $\downarrow\uparrow\rightarrow\leftarrow$}{camera rotation}
@@ -108,7 +107,7 @@ pdfkeywords={Orbiter, Cheatsheet}
 } % End the first division of the page
 
 %----------------------------------------------------------------------------------------
-%	SECOND COLUMN SPECIFICATION 
+%	SECOND COLUMN SPECIFICATION
 %----------------------------------------------------------------------------------------
 
 \put(105,180){ % Divide the page
@@ -156,15 +155,26 @@ pdfkeywords={Orbiter, Cheatsheet}
 \sectiontitle{HUD}
 \command{Ctrl+H}{on/off}
 \command{Alt+H}{toggle colour}
-\command{H}{toggle mode}
+\command{H}{toggle mode (surface/orbit/dock)}
 \command{Ctrl+R}{HUD reference}
 \command{Ctrl+Alt+R}{HUD reference (subset)}
 
-\sectiontitle{Important files}
-
-\texttt{/.config/awesome/rc.lua}
-
-\texttt{/etc/xdg/awesome/rc.lua}
+\sectiontitle{Important Addons}
+D3D9Client
+OrbiterSound
+DeltaGliderIV
+UCGO30
+BaseSync
+TransX
+AeroBrake
+LaunchMFD
+BurnTimeCalculator
+DeltaGliderXR1
+XR2Ravenstar
+XR5Vanguard
+ISS
+HUDDrawerSDK
+ModuleMessagingExt
 
 \vspace{\baselineskip} % Whitespace before the next section
 
@@ -174,9 +184,7 @@ pdfkeywords={Orbiter, Cheatsheet}
 
 \sectiontitle{Links and information}
 
-\url{http://awesome.naquadah.org/}
-
-\url{http://awesome.naquadah.org/wiki/}
+\url{http://orbit.medphys.ucl.ac.uk/download/orbiter.pdf}
 
 %----------------------------------------------------------------------------------------
 %	FOOTNOTE
@@ -187,10 +195,8 @@ pdfkeywords={Orbiter, Cheatsheet}
 {\color{mygray}\line(1,0){30}} % Print the line with a custom color
 
 \footnotesize{
-Created by John Smith, 2015\\ 
-\url{http://johnsmith.com/}\\
-				
-Released under the MIT license.
+Created by Jan Wedekind, 2017\\
+\url{http://www.wedesoft.de/}\\
 }
 
 %----------------------------------------------------------------------------------------
