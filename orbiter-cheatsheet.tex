@@ -37,7 +37,7 @@
 
 \usepackage[ % This block contains information used to annotate the PDF
 colorlinks=false,
-pdftitle={Orbiter 2016 Cheat Sheet},
+pdftitle={Orbiter 2016 - Keyboard Cheat Sheet},
 pdfauthor={Jan Wedekind},
 pdfsubject={Cheat sheet for Orbiter 2016},
 pdfkeywords={Orbiter, Cheatsheet}
@@ -48,7 +48,7 @@ pdfkeywords={Orbiter, Cheatsheet}
 
 \renewcommand{\dots}{\ \dotfill{}\ } % Fills in the right amount of dots
 
-\newcommand{\command}[2]{#1~\dotfill{}~#2\\} % Custom command for adding a shorcut
+\newcommand{\command}[2]{\texttt{#1}~\dotfill{}~#2\\} % Custom command for adding a shorcut
 
 \newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} % Custom command for subsection titles
 
@@ -114,24 +114,28 @@ pdfkeywords={Orbiter, Cheatsheet}
 \begin{minipage}[t]{85mm} % Create a box to house text
 
 \sectiontitle{Actuators}
-\command{G}{gear}
+\command{Ctrl + A}{auxiliary power unit}
 \command{Ctrl + B}{air brake}
 \command{Ctrl + D}{undock}
+\command{Ctrl + K}{nose cone}
+\command{Alt + R}{radiator}
+\command{Ctrl + $\backslash$}{retro doors}
+\command{G}{gear}
 
 \sectiontitle{Thrusters Numpad}
-\command{+}{full main}
-\command{-}{full retro}
-\command{*}{kill retro and main}
-\command{Ctrl + +}{increase main}
-\command{Ctrl + -}{decrease main}
-\command{0}{increase hover}
-\command{.}{decrease hover}
-\command{Ctrl + /}{enable/disable RCS}
-\command{/}{toggle rotation/translation RCS}
-\command{4/6, 2/8, 1/3}{bank, pitch, yaw}
-\command{2/8, 1/3, 6/9}{up/down, left/right, forw./backw.}
-\command{Ctrl + Numpad}{same with 10\% thrust}
-\command{5}{kill rotation}
+\command{Num +}{full main}
+\command{Num -}{full retro}
+\command{Num *}{kill retro and main}
+\command{Ctrl + Num +}{increase main}
+\command{Ctrl + Num -}{decrease main}
+\command{Num 0}{increase hover}
+\command{Num .}{decrease hover}
+\command{Ctrl + Num /}{enable/disable RCS}
+\command{Num /}{toggle rotation/translation RCS}
+\command{Num 4/6, 2/8, 1/3}{bank, pitch, yaw}
+\command{Num 2/8, 1/3, 6/9}{up/dn, left/rght, forw/backw}
+\command{Ctrl + Num 2/8, 1/3, 6/9}{same but 10\% thrust}
+\command{Num 5}{kill rotation}
 \command{A}{auto hover}
 \command{L}{auto level}
 \command{[}{turn prograde}
@@ -139,18 +143,18 @@ pdfkeywords={Orbiter, Cheatsheet}
 \command{;}{turn orbit-normal}
 \command{'}{turn orbit-antinormal}
 
-\sectiontitle{Flight Controls}
-\command{Alt + /}{enable/disable aerodynamic controls}
-\command{4/6, 2/8, 1/3}{bank, pitch, yaw}
-\command{insert/delete}{trim}
-\command{,}{left wheel brake}
-\command{.}{right wheel brake}
-
 \end{minipage} % End the second column of text
 } % End the second division of the page
 
 \put(200,180){ % Divide the page
 \begin{minipage}[t]{85mm} % Create a box to house tex
+
+\sectiontitle{Flight Controls}
+\command{Alt + Num /}{enable/disable aerodynamic controls}
+\command{Num 4/6, 2/8, 1/3}{bank, pitch, yaw}
+\command{Ins/Delete}{trim}
+\command{,}{left wheel brake}
+\command{.}{right wheel brake}
 
 \sectiontitle{HUD}
 \command{Ctrl+H}{on/off}
@@ -164,17 +168,27 @@ D3D9Client
 OrbiterSound
 DeltaGliderIV
 UCGO30
+HUDDrawerSDK
+ModuleMessagingExt
 BaseSync
 TransX
 AeroBrake
 LaunchMFD
+GlideSlope
 BurnTimeCalculator
 DeltaGliderXR1
 XR2Ravenstar
 XR5Vanguard
 ISS
-HUDDrawerSDK
-ModuleMessagingExt
+
+\sectiontitle{XR Series}
+\command{0, 1, $\ldots$, 9}{Multi Display Area mode}
+\command{Alt + ,}{shift gravity center aft}
+\command{Alt + .}{shift gravity center forward}
+\command{Alt + M}{recenter center of gravity}
+\command{Alt + J}{toggle XR5 RCS configuration}
+\command{Alt + S}{airspeed hold autopilot}
+\command{Ctrl + G}{scram doors}
 
 \vspace{\baselineskip} % Whitespace before the next section
 
