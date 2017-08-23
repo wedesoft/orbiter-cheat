@@ -22,9 +22,8 @@
 \documentclass[11pt]{scrartcl} % 11pt font size
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
 
-\usepackage[margin=0pt, landscape]{geometry} % Page margins and orientation
+\usepackage[margin=1cm, landscape]{geometry} % Page margins and orientation
 
 \usepackage{graphicx} % Required for including images
 
@@ -52,23 +51,15 @@ pdfkeywords={Orbiter, Cheatsheet}
 
 \newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} % Custom command for subsection titles
 
+\newcommand{\sep}{\hspace{5mm}}
+
 %----------------------------------------------------------------------------------------
 
 \begin{document}
-
-\begin{picture}(297,210) % Create a container for the page content
-
-\put(10,200){ % Position on the page to put the title
-\begin{minipage}[t]{210mm} % The size and alignment of the title
 \section*{Orbiter 2016 -- Keyboard Cheat Sheet} % Title
-\end{minipage}
-}
 
-\put(10,180){ % Divide the page
-\begin{minipage}[t]{85mm} % Create a box to house text
-
+\begin{minipage}[t]{60mm}
 \sectiontitle{Game Play}
-
 \command{F1}{toggle external view}
 \command{Ctrl + F1}{camera dialog}
 \command{Alt + F1}{help window}
@@ -102,17 +93,9 @@ pdfkeywords={Orbiter, Cheatsheet}
 \command{F8}{toggle cockpit views}
 \command{X}{zoom out}
 \command{Z}{zoom in}
-
-\end{minipage} % End the first column of text
-} % End the first division of the page
-
-%----------------------------------------------------------------------------------------
-%	SECOND COLUMN SPECIFICATION
-%----------------------------------------------------------------------------------------
-
-\put(105,180){ % Divide the page
-\begin{minipage}[t]{85mm} % Create a box to house text
-
+\end{minipage}
+\sep
+\begin{minipage}[t]{60mm}
 \sectiontitle{Actuators}
 \command{Ctrl + A}{auxiliary power unit}
 \command{Ctrl + B}{air brake}
@@ -121,6 +104,7 @@ pdfkeywords={Orbiter, Cheatsheet}
 \command{Alt + R}{radiator}
 \command{Ctrl + $\backslash$}{retro doors}
 \command{G}{gear}
+\command{,/.}{left/right wheel brake}
 
 \sectiontitle{Thrusters Numpad}
 \command{Num +}{full main}
@@ -131,36 +115,34 @@ pdfkeywords={Orbiter, Cheatsheet}
 \command{Num 0}{increase hover}
 \command{Num .}{decrease hover}
 \command{Ctrl + Num /}{enable/disable RCS}
-\command{Num /}{toggle rotation/translation RCS}
-\command{Num 4/6, 2/8, 1/3}{bank, pitch, yaw}
-\command{Num 2/8, 1/3, 6/9}{up/dn, left/rght, forw/backw}
-\command{Ctrl + Num 2/8, 1/3, 6/9}{same but 10\% thrust}
+\command{Num /}{toggle rotation/translation}
+\command{Num 2/8}{up/down}
+\command{Num 1/3}{left/right}
+\command{Num 6/9}{forward/backward}
+\command{Ctrl + Num 2/8}{up/dn 10\% thrust}
+\command{Ctrl + Num 1/3}{left/right 10\%}
+\command{Ctrl + Num 6/9}{forw/bckwd 10\%}
 \command{Num 5}{kill rotation}
 \command{A}{auto hover}
 \command{L}{auto level}
-\command{[}{turn prograde}
-\command{]}{turn retrograde}
-\command{;}{turn orbit-normal}
-\command{'}{turn orbit-antinormal}
-
-\end{minipage} % End the second column of text
-} % End the second division of the page
-
-\put(200,180){ % Divide the page
-\begin{minipage}[t]{85mm} % Create a box to house tex
-
-\sectiontitle{Flight Controls}
-\command{Alt + Num /}{enable/disable aerodynamic controls}
-\command{Num 4/6, 2/8, 1/3}{bank, pitch, yaw}
+\command{[/]}{turn prograde/retrograde}
+\command{;/'}{turn orbit-normal/antinormal}
+\end{minipage}
+\sep
+\begin{minipage}[t]{60mm}
+\sectiontitle{Aerodynamic Controls}
+\command{Alt + Num /}{enable/disable}
+\command{Num 4/6}{bank}
+\command{Num 2/8}{pitch}
+\command{Num 1/3}{yaw}
 \command{Ins/Delete}{trim}
-\command{,/.}{left/right wheel brake}
 
 \sectiontitle{HUD}
 \command{Ctrl+H}{on/off}
 \command{Alt+H}{toggle colour}
-\command{H}{toggle mode (surface/orbit/dock)}
-\command{Ctrl+R}{HUD reference}
-\command{Ctrl+Alt+R}{HUD reference (subset)}
+\command{H}{toggle surface/orbit/dock}
+\command{Ctrl+R}{reference}
+\command{Ctrl+Alt+R}{reference (subset)}
 
 \sectiontitle{Important Addons}
 D3D9Client
@@ -181,29 +163,24 @@ XR5Vanguard
 ISS\\
 
 \sectiontitle{XR Series}
-\command{0, 1, $\ldots$, 9}{Multi Display Area mode}
-\command{Alt + ,}{shift gravity center aft}
-\command{Alt + .}{shift gravity center forward}
+\command{0, 1, $\ldots$, 9}{Multi Display Area}
+\command{Alt + ,}{shift center of gravity aft}
+\command{Alt + .}{shift center of gravity fwd}
 \command{Alt + M}{recenter center of gravity}
-\command{Alt + J}{toggle XR5 RCS configuration}
+\command{Alt + J}{toggle XR5 RCS config}
 \command{Alt + S}{airspeed hold autopilot}
 \command{Ctrl + G}{scram doors}
+\command{Alt + Num +}{increase scram}
+\command{Alt + Num -}{decrease scram}
 
-\vspace{\baselineskip} % Whitespace before the next section
-
-%----------------------------------------------------------------------------------------
-%	LINKS AND INFORMATION
-%----------------------------------------------------------------------------------------
-
+\end{minipage}
+\sep
+\begin{minipage}[t]{60mm} % Create a box to house tex
+%\vspace{\baselineskip} % Whitespace before the next section
 \sectiontitle{Links and information}
 
 \url{http://orbit.medphys.ucl.ac.uk/download/orbiter.pdf}
 
-%----------------------------------------------------------------------------------------
-%	FOOTNOTE
-%----------------------------------------------------------------------------------------
-
-\vspace{\baselineskip}
 \linethickness{0.5mm} % Thickness of the footer line
 {\color{mygray}\line(1,0){30}} % Print the line with a custom color
 
@@ -212,12 +189,6 @@ Created by Jan Wedekind, 2017\\
 \url{http://www.wedesoft.de/}\\
 }
 
-%----------------------------------------------------------------------------------------
-
 \end{minipage} % End the third column of text
-} % End the third division of the page
-\end{picture} % End the container for the entire page
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
